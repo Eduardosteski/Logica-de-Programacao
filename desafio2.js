@@ -32,19 +32,24 @@ if (vitórias < ferro) {
 let derrotas = 10;
 let saldoVitorias = vitórias - derrotas;
 
-//Nível do jogador
+//Função para calcular o nível
 function calcularNivel(saldoVitorias) {
-    if (saldoVitorias < 10) {
-        return 1;
+    if (saldoVitorias < 0) {
+        return "Negativo";
+    } else if (saldoVitorias < 10) {
+        return "Ruim";
     } else if (saldoVitorias < 20) {
-        return 2;
+        return "Regular";
     } else if (saldoVitorias < 30) {
-        return 3;
+        return "Bom";
+    } else if (saldoVitorias < 40) {
+        return "Ótimo";
     } else {
-        return 4;
+        return "Excelente";
     }
 }
 
+//Nível
 let nivel = calcularNivel(saldoVitorias);
 
 //Mensagem final
